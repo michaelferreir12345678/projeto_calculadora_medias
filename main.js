@@ -16,7 +16,6 @@ form.addEventListener('submit', function(e){
     adicionaLinha();
     atualizaTabela();
     atualizaMedia();
-
 })
 
 function adicionaLinha(){
@@ -62,7 +61,7 @@ function calculoMedia (){
 function atualizaMedia(){
     const mediaFinal = calculoMedia();
 
-    document.querySelector(".media-final").innerHTML = mediaFinal
+    document.querySelector(".media-final").innerHTML = mediaFinal.toFixed(2);
 
     document.querySelector(".atividade").innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado; 
 }
